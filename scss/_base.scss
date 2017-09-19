@@ -1,5 +1,260 @@
 @import 'variables';
+@import 'copied';
 
 body {
   font-family: 'Roboto', sans-serif;
+}
+@media(max-width: 1920px) {
+  .fa-bars {
+    color: white;
+  }
+}
+
+header {
+  height: 75px;
+  background-color: black;
+  transition: top 0.3s;
+
+  > a {
+    position: relative;
+    color: #000;
+  }
+
+  img {
+    padding-left: 1.5rem;
+  }
+}
+
+.nav2 {
+  width: 100vw;
+  background-color: #F6F6F6;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 2px 2px 1px #D3D3D3;
+  @media (min-width: 768px) {
+    float: none;
+  }
+
+  li {
+    padding-left: 3rem;
+    @media (max-width: 768px) {
+      padding-left: 0;
+    }
+
+    a {
+      color: #898989;
+      font-size: 1.5rem;
+
+      &:hover {
+        background-color: inherit;
+      }
+    }
+  } // end li
+} // end nav2
+
+/* Bubble Bottom */
+.hvr-bubble-bottom {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+}
+
+.hvr-bubble-bottom:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  border-style: solid;
+  left: calc(50% - 10px);
+  bottom: -2.2rem;
+  border-width: 10px 10px 0 10px;
+  border-color: #F6F6F6 transparent transparent transparent;
+}
+
+.container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.breadcrumb {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  @media(min-width: 768px) {
+    margin-top: 4rem;
+  }
+
+  a {
+    font-size: 1.6rem;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.attendee {
+  color: #1DA8D5;
+}
+
+.untilDate {
+  display: inline;
+}
+
+.soldOut {
+  color: white;
+  padding: 0.2rem;
+  background-color: #ADD8E6;
+}
+
+.text {
+  text-align: center;
+  padding-left: 30rem;
+  padding-right: 30rem;
+  margin-bottom: 5rem;
+}
+
+.date {
+  color: #FF1919;
+}
+
+.until {
+  color: black;
+}
+
+.card {
+  @media(min-width: 992px) {
+    height: 24rem;
+  }
+  box-shadow: 2px 2px 2px #D3D3D3;
+  background-color: #f6f6f6;
+  text-align: center;
+  padding-top: .8rem;
+
+  h1 {
+    margin-top: 2rem;
+    font-size: 5.5rem;
+  }
+  input {
+    width: 98%;
+    margin-bottom: 10px;
+  }
+  p:nth-child(1) {
+
+  }
+  a {
+    width: 100%;
+    display: block;
+    background-color: #1DA8D5;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.fa-clock-o {
+  color: black;
+}
+
+.popCard {
+  height: 28rem;
+  margin-top: -2rem;
+  box-shadow: 2px 2px 1px #D3D3D3;
+  background-color: #f6f6f6;
+  text-align: center;
+  padding-top: .8rem;
+  h1 {
+    margin-top: 2rem;
+    font-size: 5.5rem;
+  }
+  a {
+    width: 100%;
+    display: block;
+    background-color: #FF1919;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.show {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 6rem;
+  margin-bottom: 10rem;
+  color: #1DA8D5;
+  background-color: white;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #1DA8D5;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 2.5rem;
+  padding-left: 2.5rem;
+  font-size: 1.6rem;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  overflow: hidden;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
+}
+
+.show:hover, .show:focus, .show:active {
+  background-color: #2098D1;
+  color: white;
+}
+
+.partners {
+  color: #898989;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 1.6rem;
+}
+
+.workday {
+  margin-bottom: 6rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.red {
+  color: #FF1919;
+  font-size: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: -1.5rem;
+}
+
+.title {
+  color: #1DA8D5;
+}
+
+h1 {
+  color: #1DA8D5;
+}
+
+.lastsUntil {
+  color: #1DA8D5;
+  font-size: 1.5rem;
+}
+
+.well {
+  background-color: #f6f6f6;
+  border: none;
+  box-shadow: 2px 2px 2px #D3D3D3;
+  position: relative;
+}
+
+.col-md-3 {
+  padding: .7rem;
 }

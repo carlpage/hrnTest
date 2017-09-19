@@ -6,6 +6,7 @@ var gulp = require('gulp');
     imagemin = require('gulp-imagemin'),
     stripDebug = require('gulp-strip-debug'),
     uglify = require('gulp-uglify'),
+    concat = require('gulp-concat'),
     rename = require('gulp-rename'),
     plumber = require('gulp-plumber'),
     gutil = require('gulp-util'),

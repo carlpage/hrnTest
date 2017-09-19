@@ -1,24 +1,230 @@
 <!DOCTYPE html>
-<html ng-app='myApp' lang="en">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="bower_components/hover/css/hover-min.css"> -->
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="css/main.min.css">
 
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="bower_components/angular/angular.min.js"></script>
-  <script src="scripts/controller.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="scripts/jQueryFile.js"></script>
   <title>HRN Test</title>
 </head>
 
-<body ng-controller="hrnController as hc">
+<body>
 
+  <header id="header">
+    <div class="navbar-container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <i class="fa fa-bars fa-3x"></i>
+        </button>
+        <a class="navbar-brand" href="#">
+          <img src="images/menu-logo-2.svg" alt="logo">
+        </a>
+      </div>
+      <div id="navbar" class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right"></ul>
+      </div>
+    </div>
+  </header>
 
+  <div class="navbar-container">
+    <div id="navbar">
+      <ul class="nav2 nav navbar-nav navbar-center">
+        <li>
+          <a href="#" class="attendee hvr-bubble-bottom"><i class="fa fa-user"></i> Single Attendee</a>
+        </li>
+        <li>
+          <a href="#" class="hvr-underline-from-left"><i class="fa fa-users"></i> Group Tickets</a>
+        </li>
+        <li>
+          <a href="#" class="hvr-underline-from-left"><i class="fa fa-crosshairs"></i> Investors</a>
+        </li>
+        <li>
+          <a href="#" class="hvr-underline-from-left"><i class="fa fa-lightbulb-o"></i> Startups</a>
+        </li>
+      </ul>
+    </div>
+    <!-- end navbar -->
+  </div>
+  <!-- end navbar container -->
+
+  <div class="container">
+
+    <ol class="breadcrumb">
+      <li><a href="#">Early Bird <span class="soldOut">Sold Out</span></a></li>
+      <li>
+        <a href="#"><b>Summer Saver</b> <i class="fa fa-clock-o"></i>
+          <span class="untilDate"><span class="until">Until </span><span class="date">Aug. 31</span></span>
+        </a>
+      </li>
+      <li><a href="#">Regular</a></li>
+      <li><a href="#">Late</a></li>
+      <li><a href="#">Onsite Registration</a></li>
+    </ol>
+
+    <p class="text hidden-sm hidden-xs">Interactively enable web-enabled resources before high-payoff products. Efficiently utilize user friendly bandwidth whereas effective benefits. Interactively syndicate emerging e-markets via reliable channels. Completely deliver magnetic. Interactively syndicate emerging e-markets via reliable channels.</p>
+
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card">
+          <h3 class="title"><b>SUMMER SAVER</b></h3>
+          <h1>€1595</h1>
+          <p>Save €500</p>
+          <p class="lastsUntil">Until August 31</p>
+          <div class="collapse" id="collapse1">
+            <div class="well">
+              <ul>
+                <li>Seamlessly disintermediate standardized partnerships through.</li>
+                <li>Seamlessly disintermediate standardized partnerships through.</li>
+                <li>Seamlessly disintermediate standardized partnerships through.</li>
+                <li>Seamlessly disintermediate standardized partnerships through.</li>
+                <li>Seamlessly disintermediate standardized partnerships through.</li>
+              </ul>
+            </div>
+          </div>
+          <a href="#">BOOK NOW</a>
+        </div> <!-- end card -->
+      </div> <!-- end column -->
+
+      <div class="col-md-3">
+        <div class="popCard">
+          <p class="red">MOST POPULAR</p>
+          <h3 class="title"><b>EXPO ONLY</b></h3>
+          <h1>€299</h1>
+          <p class="lastsUntil">Until October</p>
+          <div class="collapse" id="collapse2">
+            <div class="well">
+              <ul>
+                <li>Seamlessly disintermediate standardized partnerships through.</li>
+                <li>Seamlessly disintermediate standardized partnerships through.</li>
+                <li>Seamlessly disintermediate standardized partnerships through.</li>
+                <li>Seamlessly disintermediate standardized partnerships through.</li>
+                <li>Seamlessly disintermediate standardized partnerships through.</li>
+              </ul>
+            </div>
+          </div>
+          <a href="#">BOOK NOW</a>
+        </div> <!-- end card -->
+      </div> <!-- end column -->
+
+      <div class="col-md-3">
+        <div class="card">
+          <h4 class="title"><b>PUBLIC &amp GOVERNMENTAL SECTOR</b></h4>
+          <h1>€1295</h1>
+          <p>Save €300 from the Summer Saver</p>
+          <p class="lastsUntil">Until October</p>
+          <div class="collapse" id="collapse3">
+            <div class="well">
+              <ul>
+                <li>Seamlessly disintermediate standardized partnerships through.</li>
+                <li>Seamlessly disintermediate standardized partnerships through.</li>
+                <li>Seamlessly disintermediate standardized partnerships through.</li>
+                <li>Seamlessly disintermediate standardized partnerships through.</li>
+                <li>Seamlessly disintermediate standardized partnerships through.</li>
+              </ul>
+            </div>
+          </div>
+          <a href="#">BOOK NOW</a>
+        </div> <!-- end card -->
+      </div> <!-- end column -->
+
+      <div class="col-md-3">
+        <div class="card">
+          <h4 class="title"><b>STANDARD CONFERENCE &amp EXPO</b></h4>
+          <h1>€1695</h1>
+          <p>Do you have a promo code?</p>
+          <input type="text" placeholder="Type it here &amp then pick DAY01/DAY02 OR BOTH">
+          <div class="collapse" id="collapse4">
+            <div class="well">
+              <ul>
+                <li>Seamlessly disintermediate standardized partnerships through.</li>
+                <li>Seamlessly disintermediate standardized partnerships through.</li>
+                <li>Seamlessly disintermediate standardized partnerships through.</li>
+                <li>Seamlessly disintermediate standardized partnerships through.</li>
+                <li>Seamlessly disintermediate standardized partnerships through.</li>
+              </ul>
+            </div>
+          </div>
+          <a href="#">BOOK NOW</a>
+        </div> <!-- end card -->
+      </div> <!-- end column -->
+    </div> <!-- end row -->
+
+    <button class="show" type="button" data-toggle="collapse" data-target="#collapse1,#collapse2,#collapse3,#collapse4" aria-expanded="false" aria-controls="collapseExample"><b>Compare Benefits</b></button>
+
+    <p class="partners">OUR TRUSTED PARTNERS</p>
+
+    <div class="row workday">
+      <img src="images/workday-01.svg" alt="">
+      <img src="images/workday-01.svg" alt="">
+      <img src="images/workday-01.svg" alt="">
+      <img src="images/workday-01.svg" alt="">
+      <img src="images/workday-01.svg" alt="">
+    </div>
+
+  </div>
+  <!-- end container -->
+
+  <footer>
+    <!-- Main Footer -->
+    <div id="MainFooter">
+      <img id="FooterLogo" src="http://www.hrtechcongress.com/amsterdam/img/footer/hr-tech-world-logo.svg" alt="HR Tech World">
+      <!-- HRN Links -->
+      <ul id="FooterLinks" class="MarginBottomSmall">
+        <li><a href="#" title="HRN" class="FooterLink">HRN</a></li>
+        <li><a href="#" title="ABOUT" class="FooterLink">ABOUT</a></li>
+        <li><a href="#" title="ABOUT" class="FooterLink">TEAM</a></li>
+        <li><a href="#" title="JOBS" class="FooterLink">JOBS</a></li>
+        <li><a href="#" title="CONTACT" class="FooterLink">CONTACT</a></li>
+      </ul>
+      <!-- END HRN Links -->
+      <!-- Social Links -->
+      <ul id="FooterSocialIcons">
+        <li>
+          <a title="Twitter" href="#" target="blank"><i class="fa fa-twitter"></i></a>
+        </li>
+        <li>
+          <a title="LinkedIn" href="#" target="blank"><i class="fa fa-linkedin"></i></a>
+        </li>
+        <li>
+          <a title="Facebook" href="#" target="blank"><i class="fa fa-facebook"></i></a>
+        </li>
+        <li>
+          <a title="Instgram" href="#" target="blank"><i class="fa fa-instagram"></i></a>
+        </li>
+        <li>
+          <a title="Slideshare" href="#" target="blank"><i class="fa fa-slideshare"></i></a>
+        </li>
+        <li>
+          <a title="Youtube" href="#" target="blank"><i class="fa fa-youtube-play"></i></a>
+        </li>
+      </ul>
+      <!-- END Social Links -->
+    </div>
+    <!-- Sub Footer -->
+    <div id="SubFooter">
+      <p>
+        <span class="SubFooterElement">HRN</span>
+        <span class="SubFooterDivider">|</span>
+        <span><a href="terms" title="HR Tech World Terms &amp; Conditions" class="pardotTrackClick">Terms &amp; Conditions</a>
+                |
+                <a href="cookie-policy" title="HR Tech World Cookie Policy" class="pardotTrackClick">Cookie Policy</a> </span>
+        <span class="SubFooterDivider">|</span>
+        <span class="SubFooterElement">Copyright © 2015 HRN.</span>
+        <span class="SubFooterElement">All Rights Reserved.</span>
+      </p>
+    </div>
+    <!-- Sub Footer -->
+  </footer>
 
 </body>
 

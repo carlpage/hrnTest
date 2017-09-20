@@ -4,6 +4,7 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
+
 @media(max-width: 1920px) {
   .fa-bars {
     color: white;
@@ -25,6 +26,11 @@ header {
   }
 }
 
+.cardRowOpen {
+  height: 600px;
+  -webkit-transition: all 0.5s ease-in-out;
+}
+
 .nav2 {
   width: 100vw;
   background-color: #F6F6F6;
@@ -33,7 +39,7 @@ header {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  box-shadow: 2px 2px 1px #D3D3D3;
+  box-shadow: 2px 2px 1px $greyShadow;
   @media (min-width: 768px) {
     float: none;
   }
@@ -52,9 +58,10 @@ header {
         background-color: inherit;
       }
     }
-  } // end li
-} // end nav2
-
+  }
+  // end li
+}
+// end nav2
 /* Bubble Bottom */
 .hvr-bubble-bottom {
   display: inline-block;
@@ -82,26 +89,48 @@ header {
   padding-right: 0;
 }
 
+.lightBlue {
+  color: $lightBlue;
+}
+
 .breadcrumb {
   background-color: white;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+
   @media(min-width: 768px) {
     margin-top: 4rem;
   }
 
-  a {
-    font-size: 1.6rem;
+  >li+li:nth-child(1) {
+    font-size: 5rem;
+
   }
 
-  a:hover {
-    text-decoration: none;
+  >li+li:before {
+    color: $lightBlue !important;
+    // font-size: 2rem !important;
   }
+
+  a {
+    font-size: 1.6rem;
+    &:nth-child(1) {
+      // font-size: 1.8rem !important;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  } // end a
+} // end breadcrumb
+
+.largeBr {
+  font-size: 1.8rem !important;
+  // padding-top: -2rem;
 }
 
 .attendee {
-  color: #1DA8D5;
+  color: $blue;
 }
 
 .untilDate {
@@ -122,39 +151,56 @@ header {
 }
 
 .date {
-  color: #FF1919;
+  color: $bg;
 }
 
 .until {
   color: black;
 }
 
+// .lightBlue {
+//   color: $lightBlue;
+// }
+
+// .largeBr {
+//   font-size: 1.8rem !important;
+//   margin-top: -2rem !important;
+// }
+
 .card {
+  box-shadow: 2px 2px 2px $greyShadow;
+  background-color: $cardBg;
+  text-align: center;
+  padding-top: 0.8rem;
+  position: relative;
+
   @media(min-width: 992px) {
     height: 24rem;
   }
-  box-shadow: 2px 2px 2px #D3D3D3;
-  background-color: #f6f6f6;
-  text-align: center;
-  padding-top: .8rem;
-
   h1 {
     margin-top: 2rem;
     font-size: 5.5rem;
   }
+
   input {
-    width: 98%;
+    width: 93%;
     margin-bottom: 10px;
   }
-  p:nth-child(1) {
 
-  }
+  p:nth-child(1) {}
+
   a {
     width: 100%;
     display: block;
-    background-color: #1DA8D5;
+    background-color: $blue;
     color: white;
     text-decoration: none;
+    position: absolute;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    // margin-top: 2rem;
+    bottom: 0;
+    left: 0;
   }
 }
 
@@ -165,37 +211,40 @@ header {
 .popCard {
   height: 28rem;
   margin-top: -2rem;
-  box-shadow: 2px 2px 1px #D3D3D3;
-  background-color: #f6f6f6;
+  box-shadow: 2px 2px 1px $greyShadow;
+  background-color: $cardBg;
   text-align: center;
-  padding-top: .8rem;
+  padding-top: 0.8rem;
+  position: relative;
+
   h1 {
     margin-top: 2rem;
     font-size: 5.5rem;
   }
+
   a {
     width: 100%;
     display: block;
-    background-color: #FF1919;
+    background-color: $bg;
     color: white;
     text-decoration: none;
+    position: absolute;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    bottom: 0;
+    left: 0;
   }
 }
 
 .show {
   display: flex;
-  margin: 0 auto;
-  margin-top: 6rem;
-  margin-bottom: 10rem;
-  color: #1DA8D5;
+  margin: 6rem auto 10rem;
+  color: $blue;
   background-color: white;
   border-style: solid;
   border-width: 2px;
-  border-color: #1DA8D5;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-right: 2.5rem;
-  padding-left: 2.5rem;
+  border-color: $blue;
+  padding: 1rem 2.5rem;
   font-size: 1.6rem;
   display: inline-block;
   vertical-align: middle;
@@ -209,7 +258,9 @@ header {
   transition-property: color, background-color;
 }
 
-.show:hover, .show:focus, .show:active {
+.show:active,
+.show:focus,
+.show:hover {
   background-color: #2098D1;
   color: white;
 }
@@ -229,32 +280,33 @@ header {
 }
 
 .red {
-  color: #FF1919;
+  color: $bg;
   font-size: 2rem;
   margin-top: 1.5rem;
   margin-bottom: -1.5rem;
 }
 
 .title {
-  color: #1DA8D5;
+  color: $blue;
 }
 
 h1 {
-  color: #1DA8D5;
+  color: $blue;
 }
 
 .lastsUntil {
-  color: #1DA8D5;
+  color: $blue;
   font-size: 1.5rem;
+  // margin-bottom: 2rem;
 }
 
 .well {
-  background-color: #f6f6f6;
+  background-color: $cardBg;
   border: none;
-  box-shadow: 2px 2px 2px #D3D3D3;
+  box-shadow: 2px 2px 2px $greyShadow;
   position: relative;
 }
 
 .col-md-3 {
-  padding: .7rem;
+  padding: 0.7rem;
 }

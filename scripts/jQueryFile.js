@@ -1,14 +1,13 @@
 $(document).ready(function() {
   console.log('in jQueryFile');
-  $('.collapse').collapse({
-    toggle: false
+
+  // toggles the benefits offers
+  $(".show").click(function() {
+    $(".show").text(($(".show").text() == 'Compare Benefits') ? 'Close' : 'Compare Benefits').fadeIn();
+    $('.cardRow').toggleClass('cardRowOpen');
+    $('.collapse').collapse({
+      toggle: true
+    });
   });
-
-  $(".show").click(function () {
-    // $(".show").fadeOut(function () {
-        $(".show").text(($(".show").text() == 'Compare Benefits') ? 'Expand it' : 'Compare Benefits').fadeIn();
-    // })
-})
-
 
 }); // end jQuery

@@ -276,16 +276,11 @@ header {
     font-size: 5.5rem;
   }
 
- // {{{{{{{{}}}}}}}}
-
- // {{{{{{{{}}}}}}}}
-
   input {
     width: 88%;
     margin-bottom: 10px;
     &::-webkit-input-placeholder {
        font-style: italic;
-      //  color: $blue;
     }
     &:-moz-placeholder {
        font-style: italic;

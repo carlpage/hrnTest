@@ -13,7 +13,7 @@ body {
 }
 
 .fa-user, .fa-users, .fa-crosshairs, .fa-lightbulb-o {
-  @media(max-width: 768px) {
+  @media(max-width: $xs) {
     display: block;
     text-align: center;
     margin-bottom: -1rem;
@@ -41,12 +41,15 @@ header {
 }
 
 .cardRowOpen {
-  height: 600px;
+  height: 640px;
+  @media(max-width: 1200px) and (min-width: 992px) {
+    height: 750px !important;
+  }
 }
 
 .nav2 {
   width: 100%;
-  background-color: #F6F6F6;
+  background-color: $cardBg;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
   display: flex;
@@ -54,25 +57,30 @@ header {
   flex-wrap: wrap;
   box-shadow: 2px 2px 1px $greyShadow;
 
-  @media(max-width: 768px) {
+  @media(max-width: $xs) {
     padding: .5rem;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $xs) {
     float: none;
   }
 
+
+
   li {
-    padding-left: 3rem;
-    @media (max-width: 768px) {
+    padding-left: 10rem;
+    @media(min-width: $xs) and (max-width: 913px) {
+      padding-left: 6rem !important;
+    }
+    @media (max-width: $xs) {
       padding-left: 0;
     }
 
     a {
-      color: #898989;
+      color: $grey;
       font-size: 1.5rem;
       &:nth-child(1) {
-        @media(max-width: 768px) {
+        @media(max-width: $xs) {
           text-align: center;
         }
       }
@@ -85,6 +93,7 @@ header {
 
   } // end li
 } // end nav2
+
 /* Bubble Bottom */
 .hvr-bubble-bottom {
   display: inline-block;
@@ -104,11 +113,12 @@ header {
   left: calc(50% - 10px);
   bottom: -2.2rem;
   border-width: 10px 10px 0 10px;
-  border-color: #F6F6F6 transparent transparent transparent;
-  @media(max-width: 768px) {
+  border-color: $cardBg transparent transparent transparent;
+  @media(max-width: $xs) {
     padding: .4rem;
   }
 }
+/* END Bubble Bottom */
 
 .container {
   padding-left: 0;
@@ -124,22 +134,27 @@ header {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  text-transform: uppercase;
 
-  @media(min-width: 768px) {
+  @media(min-width: $xs) {
     margin-top: 4rem;
   }
 
-  @media(max-width: 992px) and (min-width:768px) {
+  @media(max-width: $xs) {
+    display: block !important;
+    text-align: center;
+    margin-bottom: 0px !important;
+    li {
+      margin-bottom: .1rem;
+      &:nth-child(1) {
+        margin-top: 1rem;
+        margin-bottom: .3rem;
+      }
+    }
+  }
+
+  @media(max-width: $md) and (min-width: $xs) {
     margin-bottom: 6rem;
-  }
-
-  > li+li:nth-child(1) {
-    font-size: 5rem;
-  }
-
-  > li+li:before {
-    color: $lightBlue !important;
-    // font-size: 2rem !important;
   }
 
   a {
@@ -151,21 +166,25 @@ header {
   } // end a
 } // end breadcrumb
 
+.largeDash {
+  font-size: 2.5rem;
+  margin-top: -.85rem;
+  font-weight: bold;
+  padding-left: .75rem;
+  padding-right: .75rem;
+  color: $blue;
+}
+
+.smallDash {
+  padding-left: .5rem;
+  padding-right: .5rem;
+  color: $lightBlue;
+}
+
 .saver {
   display: inline;
   font-size: 1.8rem !important;
-
-  &:before {
-    color: $lightBlue !important;
-    font-size: 2rem !important;
-    // content: '/ ';
-  }
-
-  &::after {
-    color: $lightBlue !important;
-    font-size: 2rem !important;
-    // content: '/';
-  }
+  font-weight: bold;
 }
 
 .largeBr {
@@ -174,16 +193,14 @@ header {
 }
 
 .attendee {
-  color: $blue;
-}
-
-.untilDate {
-  display: inline;
+  color: $blue !important;
+  font-weight: bold !important;
 }
 
 .soldOut {
   color: white;
-  padding: 0.2rem;
+  padding-right: 0.2rem;
+  padding-left: 0.2rem;
   background-color: #ADD8E6;
 }
 
@@ -196,15 +213,23 @@ header {
 
 .stack {
   display: inline;
-  float: right;
-  margin-top: -13px;
-  margin-left: 5px;
+  @media(min-width: $xs) {
+    float: right;
+    margin-top: -13px;
+    margin-left: 5px;
+  }
 }
 
 .date {
   font-size: 1.3rem;
   color: $bg;
   display: inline-block;
+  @media(max-width: $xs) {
+    font-size: 1.9rem;
+    &:before {
+      content: ' ';
+    }
+  }
 }
 
 .until {
@@ -212,6 +237,13 @@ header {
   color: black;
   margin: 0;
   display: inline-block;
+  @media(max-width: $xs) {
+    font-size: 1.9rem;
+    &::after {
+      content: " ";
+      white-space: pre;
+    }
+  }
 }
 
 .largeBr {
@@ -226,9 +258,17 @@ header {
   position: relative;
   min-height: 24rem;
 
-  @media(max-width: 768px) {
+  @media(max-width: $xs) {
     margin-left: 3rem;
     margin-right: 3rem;
+  }
+
+  @media(min-width: $md) {
+    min-height: 25rem;
+  }
+
+  p {
+    margin-bottom: .5rem !important;
   }
 
   h1 {
@@ -236,9 +276,30 @@ header {
     font-size: 5.5rem;
   }
 
+ // {{{{{{{{}}}}}}}}
+
+ // {{{{{{{{}}}}}}}}
+
   input {
-    width: 93%;
+    width: 88%;
     margin-bottom: 10px;
+    &::-webkit-input-placeholder {
+       font-style: italic;
+      //  color: $blue;
+    }
+    &:-moz-placeholder {
+       font-style: italic;
+    }
+    &::-moz-placeholder {
+       font-style: italic;
+    }
+    &:-ms-input-placeholder {
+       font-style: italic;
+    }
+  }
+
+  .grey {
+    color: $grey;
   }
 
   a {
@@ -246,6 +307,7 @@ header {
     display: block;
     background-color: $blue;
     color: white;
+    font-size: 1.8rem;
     text-decoration: none;
     position: absolute;
     padding-top: 1rem;
@@ -261,7 +323,7 @@ header {
 }
 
 .popCard {
-  min-height: 28rem;
+  min-height: 29.5rem;
   margin-top: -2rem;
   box-shadow: 2px 2px 1px $greyShadow;
   background-color: $cardBg;
@@ -269,11 +331,11 @@ header {
   padding-top: 0.8rem;
   position: relative;
 
-  @media(max-width: 992px) {
+  @media(max-width: $md) {
     min-height: 26rem !important;
   }
 
-  @media(max-width: 768px) {
+  @media(max-width: $xs) {
     margin-top: 0 !important;
     margin-left: 3rem;
     margin-right: 3rem;
@@ -295,17 +357,19 @@ header {
     color: white;
     text-decoration: none;
     position: absolute;
+    font-size: 1.8rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
     bottom: 0;
     left: 0;
+    // margin-top: 2rem;
   }
 }
 
 .show {
   display: flex;
   margin: 6rem auto 10rem;
-  @media(max-width: 768px) {
+  @media(max-width: $xs) {
     margin: 2.5rem auto 8rem;
   }
   color: $blue;
@@ -335,7 +399,7 @@ header {
 }
 
 .partners {
-  color: #898989;
+  color: $grey;
   text-align: center;
   margin-bottom: 2.5rem;
   font-size: 1.6rem;
@@ -350,7 +414,7 @@ header {
 
 .workImg {
   height:5rem;
-  @media(max-width: 768px) {
+  @media(max-width: $xs) {
     height: 4.6rem;
   }
 }

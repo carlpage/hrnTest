@@ -1,6 +1,6 @@
 # Frontend Developer - Professional Evaluation Test
 
-This project is a single page website created for HRN's Frontend Developer - Professional Evaluation Test based on the mockups provided.
+This project is a single page website created for HRN's Frontend Developer - Homework based on the mockups provided.
 
 ## Technologies
 1. HTML - Structure of the page

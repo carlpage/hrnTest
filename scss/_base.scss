@@ -8,7 +8,21 @@ body {
 @media(max-width: 1920px) {
   .fa-bars {
     color: white;
+    font-size: 3.8rem !important;
   }
+}
+
+.fa-user, .fa-users, .fa-crosshairs, .fa-lightbulb-o {
+  @media(max-width: 768px) {
+    display: block;
+    text-align: center;
+    margin-bottom: -1rem;
+    font-size: 2rem;
+  }
+}
+
+h3 {
+  font-size: 2rem;
 }
 
 header {
@@ -28,11 +42,10 @@ header {
 
 .cardRowOpen {
   height: 600px;
-  -webkit-transition: all 0.5s ease-in-out;
 }
 
 .nav2 {
-  width: 100vw;
+  width: 100%;
   background-color: #F6F6F6;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
@@ -40,6 +53,11 @@ header {
   justify-content: center;
   flex-wrap: wrap;
   box-shadow: 2px 2px 1px $greyShadow;
+
+  @media(max-width: 768px) {
+    padding: .5rem;
+  }
+
   @media (min-width: 768px) {
     float: none;
   }
@@ -53,15 +71,20 @@ header {
     a {
       color: #898989;
       font-size: 1.5rem;
+      &:nth-child(1) {
+        @media(max-width: 768px) {
+          text-align: center;
+        }
+      }
 
       &:hover {
         background-color: inherit;
+        color: black;
       }
     }
-  }
-  // end li
-}
-// end nav2
+
+  } // end li
+} // end nav2
 /* Bubble Bottom */
 .hvr-bubble-bottom {
   display: inline-block;
@@ -82,6 +105,9 @@ header {
   bottom: -2.2rem;
   border-width: 10px 10px 0 10px;
   border-color: #F6F6F6 transparent transparent transparent;
+  @media(max-width: 768px) {
+    padding: .4rem;
+  }
 }
 
 .container {
@@ -103,30 +129,48 @@ header {
     margin-top: 4rem;
   }
 
-  >li+li:nth-child(1) {
-    font-size: 5rem;
-
+  @media(max-width: 992px) and (min-width:768px) {
+    margin-bottom: 6rem;
   }
 
-  >li+li:before {
+  > li+li:nth-child(1) {
+    font-size: 5rem;
+  }
+
+  > li+li:before {
     color: $lightBlue !important;
     // font-size: 2rem !important;
   }
 
   a {
-    font-size: 1.6rem;
-    &:nth-child(1) {
-      // font-size: 1.8rem !important;
-    }
+    font-size: 1.5rem;
+
     &:hover {
       text-decoration: none;
     }
   } // end a
 } // end breadcrumb
 
+.saver {
+  display: inline;
+  font-size: 1.8rem !important;
+
+  &:before {
+    color: $lightBlue !important;
+    font-size: 2rem !important;
+    // content: '/ ';
+  }
+
+  &::after {
+    color: $lightBlue !important;
+    font-size: 2rem !important;
+    // content: '/';
+  }
+}
+
 .largeBr {
   font-size: 1.8rem !important;
-  // padding-top: -2rem;
+  margin-top: -.4rem;
 }
 
 .attendee {
@@ -150,22 +194,29 @@ header {
   margin-bottom: 5rem;
 }
 
+.stack {
+  display: inline;
+  float: right;
+  margin-top: -13px;
+  margin-left: 5px;
+}
+
 .date {
+  font-size: 1.3rem;
   color: $bg;
+  display: inline-block;
 }
 
 .until {
+  font-size: 1.3rem;
   color: black;
+  margin: 0;
+  display: inline-block;
 }
 
-// .lightBlue {
-//   color: $lightBlue;
-// }
-
-// .largeBr {
-//   font-size: 1.8rem !important;
-//   margin-top: -2rem !important;
-// }
+.largeBr {
+  display: inline;
+}
 
 .card {
   box-shadow: 2px 2px 2px $greyShadow;
@@ -173,10 +224,13 @@ header {
   text-align: center;
   padding-top: 0.8rem;
   position: relative;
+  min-height: 24rem;
 
-  @media(min-width: 992px) {
-    height: 24rem;
+  @media(max-width: 768px) {
+    margin-left: 3rem;
+    margin-right: 3rem;
   }
+
   h1 {
     margin-top: 2rem;
     font-size: 5.5rem;
@@ -187,8 +241,6 @@ header {
     margin-bottom: 10px;
   }
 
-  p:nth-child(1) {}
-
   a {
     width: 100%;
     display: block;
@@ -198,7 +250,6 @@ header {
     position: absolute;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    // margin-top: 2rem;
     bottom: 0;
     left: 0;
   }
@@ -206,16 +257,31 @@ header {
 
 .fa-clock-o {
   color: black;
+  font-size: 2.3rem !important;
 }
 
 .popCard {
-  height: 28rem;
+  min-height: 28rem;
   margin-top: -2rem;
   box-shadow: 2px 2px 1px $greyShadow;
   background-color: $cardBg;
   text-align: center;
   padding-top: 0.8rem;
   position: relative;
+
+  @media(max-width: 992px) {
+    min-height: 26rem !important;
+  }
+
+  @media(max-width: 768px) {
+    margin-top: 0 !important;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  .well {
+    padding-bottom: 11rem !important;
+  }
 
   h1 {
     margin-top: 2rem;
@@ -239,13 +305,16 @@ header {
 .show {
   display: flex;
   margin: 6rem auto 10rem;
+  @media(max-width: 768px) {
+    margin: 2.5rem auto 8rem;
+  }
   color: $blue;
   background-color: white;
   border-style: solid;
-  border-width: 2px;
+  border-width: 1px;
   border-color: $blue;
-  padding: 1rem 2.5rem;
-  font-size: 1.6rem;
+  padding: 1rem 4.5rem;
+  font-size: 1.8rem;
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
@@ -279,6 +348,13 @@ header {
   flex-wrap: wrap;
 }
 
+.workImg {
+  height:5rem;
+  @media(max-width: 768px) {
+    height: 4.6rem;
+  }
+}
+
 .red {
   color: $bg;
   font-size: 2rem;
@@ -297,7 +373,6 @@ h1 {
 .lastsUntil {
   color: $blue;
   font-size: 1.5rem;
-  // margin-bottom: 2rem;
 }
 
 .well {
@@ -305,6 +380,7 @@ h1 {
   border: none;
   box-shadow: 2px 2px 2px $greyShadow;
   position: relative;
+  padding-bottom: 6rem;
 }
 
 .col-md-3 {

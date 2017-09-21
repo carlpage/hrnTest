@@ -19,6 +19,7 @@
 
 <body>
 
+<!-- top header -->
   <header id="header">
     <div class="navbar-container">
       <div class="navbar-header">
@@ -36,44 +37,53 @@
     </div>
   </header>
 
+<!-- second header -->
   <div class="navbar-container">
     <div id="navbar">
       <ul class="nav2 nav navbar-nav navbar-center">
         <li>
-          <a href="#" class="attendee hvr-bubble-bottom"><i class="fa fa-user"></i> Single Attendee</a>
+          <a href="#" class="attendee hvr-bubble-bottom"><i class="fa fa-user"></i><br class="icon visible-xs"> Single <br class="visible-xs">Attendee</a>
         </li>
         <li>
-          <a href="#" class="hvr-underline-from-left"><i class="fa fa-users"></i> Group Tickets</a>
+          <a href="#" class="hvr-underline-from-left"><i class="fa fa-users"></i><br class="icon visible-xs"> Group <br class="visible-xs">Tickets</a>
         </li>
         <li>
-          <a href="#" class="hvr-underline-from-left"><i class="fa fa-crosshairs"></i> Investors</a>
+          <a href="#" class="hvr-underline-from-left"><i class="fa fa-crosshairs"></i><br class="icon visible-xs"> Investors</a>
         </li>
         <li>
-          <a href="#" class="hvr-underline-from-left"><i class="fa fa-lightbulb-o"></i> Startups</a>
+          <a href="#" class="hvr-underline-from-left"><i class="fa fa-lightbulb-o"></i><br class="icon visible-xs"> Startups</a>
         </li>
       </ul>
-    </div>
-    <!-- end navbar -->
-  </div>
-  <!-- end navbar container -->
+    </div> <!-- end navbar -->
+  </div> <!-- end navbar container -->
 
   <div class="container">
-
+<!-- breadcrumb -->
     <ol class="breadcrumb">
       <li><a href="#" class="lightBlue">Early Bird <span class="soldOut">Sold Out</span></a></li>
-      <li>
-        <a href="#" class="largeBr"><b>Summer Saver</b> <i class="fa fa-clock-o"></i>
-          <span class="untilDate"><span class="until">Until </span><span class="date">Aug. 31</span></span>
+
+      <li class="largeBr">
+        <a href="#" class="saver"><b>Summer Saver</b> <i class="fa fa-clock-o"></i>
+          <div class="stack">
+            <span class="until">Until</span>
+            <br>
+            <span class="date pull-right">Aug. 31</span>
+          </div>
         </a>
       </li>
+
       <li><a href="#" class="lightBlue">Regular</a></li>
+
       <li><a href="#" class="lightBlue">Late</a></li>
+
       <li><a href="#" class="lightBlue">Onsite Registration</a></li>
     </ol>
 
+ <!-- text only visible col-md and up -->
     <p class="text hidden-sm hidden-xs">Interactively enable web-enabled resources before high-payoff products. Efficiently utilize user friendly bandwidth whereas effective benefits. Interactively syndicate emerging e-markets via reliable channels. Completely deliver magnetic. Interactively
       syndicate emerging e-markets via reliable channels.</p>
 
+<!-- beginning of cards -->
     <div class="row cardRow">
       <div class="col-md-3 col-sm-6 col-xs-12">
         <div class="card">
@@ -81,6 +91,7 @@
           <h1>€1595</h1>
           <p>Save €500</p>
           <p class="lastsUntil">Until August 31</p>
+          <!-- used different collapse numbers because I needed different classes for all the cards to collapse -->
           <div class="collapse" id="collapse1">
             <div class="well">
               <ul>
@@ -171,16 +182,18 @@
     </div>
     <!-- end row -->
 
-    <button class="show" type="button" data-toggle="collapse" data-target="#collapse1,#collapse2,#collapse3,#collapse4" aria-expanded="false" aria-controls="collapseExample"><b>Compare Benefits</b></button>
+<!-- collapse button -->
+    <button class="show" type="button" data-toggle="collapse" data-target="#collapse1,#collapse2,#collapse3,#collapse4" aria-expanded="false" aria-controls="collapseExample"><b>COMPARE BENEFITS</b></button>
 
     <p class="partners">OUR TRUSTED PARTNERS</p>
 
+<!-- partner images -->
     <div class="row workday">
-      <img src="images/workday-01.svg" alt="">
-      <img src="images/workday-01.svg" alt="">
-      <img src="images/workday-01.svg" alt="">
-      <img src="images/workday-01.svg" alt="">
-      <img src="images/workday-01.svg" alt="">
+      <img class="workImg" src="images/workday-01.svg" alt="">
+      <img class="workImg" src="images/workday-01.svg" alt="">
+      <img class="workImg" src="images/workday-01.svg" alt="">
+      <img class="workImg" src="images/workday-01.svg" alt="">
+      <img class="workImg" src="images/workday-01.svg" alt="">
     </div>
 
   </div>

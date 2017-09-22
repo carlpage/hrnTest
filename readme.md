@@ -1,4 +1,4 @@
-# Frontend Developer - Professional Evaluation Test
+# Frontend Developer - Homework
 
 This project is a single page website created for HRN's Frontend Developer - Homework based on the mockups provided.
 

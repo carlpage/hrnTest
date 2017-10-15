@@ -69,9 +69,7 @@ gulp.task('html', function() {
 // watch all tasks
 gulp.task('serve', function() {
   browserSync.init({
-    server: {
-      baseDir: './'
-    }
+    server: { baseDir: './' }
   });
   gulp.watch('./dev/scripts/*.js', ['scripts']);
   gulp.watch('./dev/scss/*.scss', ['styles']);
